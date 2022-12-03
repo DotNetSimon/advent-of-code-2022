@@ -3,8 +3,11 @@ import kotlin.system.measureTimeMillis
 fun main() {
     println("Advent of code: Day ....")
     val timeInMillis = measureTimeMillis {
-        // Day1.puzzleA()
-        Day2.puzzleB()
+        val day = 3
+        val data = DataSource.getDataAsList(day)
+        val result = Day3.puzzleB(data)
+
+        println("Puzzle day $day = $result")
     }
     println("(The execution took $timeInMillis ms)")
 }
