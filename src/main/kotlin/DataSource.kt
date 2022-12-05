@@ -23,7 +23,7 @@ class DataSource {
                 .build()
 
             val response = client.send(request, HttpResponse.BodyHandlers.ofString())
-            return response.body().split("\n")
+            return response.body().split("\n").filterNot { it == "" }
         }
     }
 }
