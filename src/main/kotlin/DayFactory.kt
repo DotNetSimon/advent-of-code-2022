@@ -3,6 +3,7 @@ class DayFactory {
         fun createDay(day: Int): Day {
             return when(day) {
                 12 -> Day12()
+                13 -> Day13()
                 else -> throw IllegalArgumentException("Day doesn't exist")
             }
         }
