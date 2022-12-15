@@ -8,7 +8,7 @@ class Day14 : Day {
         /**
          * simulate a single point of sand falling down one 'step'.
          */
-        fun sandFall(point: Day12.Point): Day12.Point {
+        fun sandFall(point: Point): Point {
             val options = listOf(point.down(), point.downLeft(), point.downRight())
             for (p in options) {
                 if (p.x < 0 || p.y > height) { return p }
@@ -22,7 +22,7 @@ class Day14 : Day {
          * 'spawn' a grain of sand and drop it until it stops
          */
         fun dropSand(): Int {
-            var sandOrigin = Day12.Point(origin, 0)
+            var sandOrigin = Point(origin, 0)
 
             var stopFalling = false
             while (!stopFalling) {
@@ -49,7 +49,7 @@ class Day14 : Day {
                     .map{it.split(" -> ")
                         .map {
                             val p = it.split(",")
-                            Day12.Point(p[0].toInt(), p[1].toInt())
+                            Point(p[0].toInt(), p[1].toInt())
                         }
                     }
 
