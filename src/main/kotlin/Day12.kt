@@ -4,9 +4,13 @@ import kotlin.math.abs
 class Day12: Day {
     data class Point(val x: Int, val y: Int) {
         fun left() = Point(x-1, y)
+        fun left(distance: Int) = Point(x-distance, y)
         fun right() = Point(x+1,y)
+        fun right(distance: Int) = Point(x+distance, y)
         fun up() = Point(x, y-1)
         fun down() = Point(x, y+1)
+        fun downLeft() = Point(x-1,y+1)
+        fun downRight() = Point(x+1,y+1)
     }
     data class Node(val point: Point, val height: Int, val steps: Int, val parent: Node?) {
         fun getPath(): MutableList<Node> {

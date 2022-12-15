@@ -3,7 +3,7 @@ import kotlin.system.measureTimeMillis
 fun main() {
     println("Advent of code: Day ....")
     val timeInMillis = measureTimeMillis {
-        val day = 13
+        val day = 14
         val data = DataSource.getDataAsList(day)
         val dayClass = DayFactory.createDay(day)
 
